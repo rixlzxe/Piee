@@ -145,7 +145,7 @@ body, html {
     font-size: 2.5em;
     font-family: 'Times New Roman', Times, serif;
     color: var(--text-primary);
-    text-shadow: white 3px 15px 70px;
+    text-shadow: 0 2px 8px var(--shadow-color);
     font-weight: bold;
     position: relative;
     transition: all 0.3s ease;
@@ -226,7 +226,7 @@ body, html {
 
 #home h1 {
     font-size: 3.5em;
-    text-shadow: white 3px 15px 10px;
+    text-shadow: 0 2px 10px var(--shadow-color);
     text-align: center;
     color: var(--text-secondary);
     animation: slideInLeft 0.8s ease-out;
@@ -239,7 +239,7 @@ body, html {
     box-sizing: border-box;
     color: var(--text-primary);
     font-weight: bold;
-    text-shadow: 3px 15px 70px var(--shadow-color);
+    text-shadow: 0 2px 8px var(--shadow-color);
     letter-spacing: 0.05em;
     animation: slideInLeft 0.8s ease-out 0.2s both;
 }
@@ -704,8 +704,8 @@ body, html {
 }
 
 @keyframes glow {
-    from { text-shadow: white 3px 15px 70px; }
-    to { text-shadow: white 3px 15px 100px, 0 0 20px var(--text-accent); }
+    from { text-shadow: 0 4px 20px var(--shadow-color); }
+    to { text-shadow: 0 4px 30px var(--shadow-color), 0 0 20px var(--text-accent); }
 }
 
 @keyframes float {
