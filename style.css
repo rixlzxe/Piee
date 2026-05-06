@@ -61,21 +61,20 @@ body, html {
 
 /* ===== THEME TOGGLE BUTTON ===== */
 #theme-toggle {
-    position: absolute;
-    top: 24px;
-    right: 40px;
-    z-index: 101;
     background: transparent;
     border: 2px solid var(--text-primary);
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     color: var(--text-primary);
+    margin-left: 10px;
+    flex-shrink: 0;
+    align-self: center;
 }
 
 #theme-toggle:hover {
@@ -133,8 +132,8 @@ body, html {
 .nav {
     position: absolute;
     top: 30px;
-    right: 120px;
-    gap: 40px;
+    right: 70px;
+    gap: 35px;
     display: flex;
     align-items: center;
     animation: fadeInDown 0.8s ease-out 0.3s both;
@@ -802,13 +801,6 @@ body, html {
         gap: 25px;
     }
 
-    #theme-toggle {
-        top: 16px;
-        right: 20px;
-        width: 38px;
-        height: 38px;
-    }
-
     .nav a {
         font-size: 1.6em;
     }
@@ -912,18 +904,9 @@ body, html {
         max-width: 65%;
     }
 
-    #theme-toggle {
-        top: 12px;
-        right: 10px;
-        width: 34px;
-        height: 34px;
-    }
-
     .nav a {
         font-size: 1.2em;
     }
-
-
 
     #titlePage img {
         height: 25em;
@@ -1063,13 +1046,6 @@ body, html {
         max-width: 70%;
     }
 
-    #theme-toggle {
-        top: 8px;
-        right: 8px;
-        width: 32px;
-        height: 32px;
-    }
-
     #theme-toggle svg {
         width: 16px;
         height: 16px;
@@ -1079,8 +1055,6 @@ body, html {
         font-size: 1em;
         padding: 5px 8px;
     }
-
-
 
     #titlePage img {
         height: 20em;
@@ -1218,6 +1192,17 @@ body, html {
 
     .footer p {
         font-size: 1em;
+    }
+
+    #theme-toggle {
+        width: 32px;
+        height: 32px;
+        margin-left: 5px;
+    }
+
+    #theme-toggle svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
