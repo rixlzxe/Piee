@@ -61,15 +61,20 @@ body, html {
     position: relative;
     width: 100%;
     overflow: hidden;
+    min-height: 50em;
 }
 
 #titlePage img {
     width: 100%;
-    height: auto;
-    max-height: 50em;
+    height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+
 
 /* ===== NAVIGATION ===== */
 .nav {
@@ -147,6 +152,7 @@ body, html {
 [data-theme="dark"] #theme-toggle .moon-icon { opacity: 1; }
 
 /* ===== HERO TEXT ===== */
+/* Desktop: Original right-side positioning */
 .text {
     padding: 20px;
     display: flex;
@@ -154,15 +160,14 @@ body, html {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    top: 230px;
+    right: 60px;
     text-align: center;
+    z-index: 10;
 }
 
 .text h1 {
-    font-size: 6em;
+    font-size: 7em;
     color: var(--text-primary);
     margin: 0;
     font-weight: bold;
@@ -171,9 +176,9 @@ body, html {
 }
 
 .text h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: var(--text-accent);
-    margin: 10px 0 0;
+    margin: 0;
     text-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -439,6 +444,7 @@ body, html {
 @media (min-width: 1200px) {
     .nav { gap: 35px; }
     .nav a { font-size: 2.2em; }
+    .text { top: 230px; right: 100px; }
     .text h1 { font-size: 7em; }
     .text h2 { font-size: 3em; }
 
@@ -467,6 +473,7 @@ body, html {
 @media (max-width: 1199px) and (min-width: 992px) {
     .nav { gap: 25px; right: 15px; }
     .nav a { font-size: 1.6em; }
+    .text { top: 200px; right: 50px; }
     .text h1 { font-size: 5em; }
     .text h2 { font-size: 2.2em; }
 
@@ -494,7 +501,7 @@ body, html {
     .nav a { font-size: 1.4em; }
     #theme-toggle { width: 36px; height: 36px; }
 
-    .text { top: 45%; }
+    .text { top: 180px; right: 40px; }
     .text h1 { font-size: 4em; }
     .text h2 { font-size: 1.8em; }
 
@@ -540,9 +547,9 @@ body, html {
     #theme-toggle { width: 32px; height: 32px; }
     #theme-toggle svg { width: 16px; height: 16px; }
 
-    .text { top: 45%; padding: 10px; }
-    .text h1 { font-size: 3em; }
-    .text h2 { font-size: 1.4em; }
+    .text { top: 120px; right: 20px; left: auto; transform: none; padding: 10px; }
+    .text h1 { font-size: 2.5em; }
+    .text h2 { font-size: 1.3em; }
 
     #titlePage img { max-height: 35em; }
 
@@ -615,12 +622,16 @@ body, html {
     #theme-toggle svg { width: 14px; height: 14px; }
 
     .text { 
-        top: 45%; 
+        top: 100px; 
+        right: 15px;
+        left: auto;
+        transform: none;
         padding: 5px;
-        width: 95%;
+        width: auto;
+        max-width: 55%;
     }
-    .text h1 { font-size: 2.2em; }
-    .text h2 { font-size: 1.1em; margin-top: 5px; }
+    .text h1 { font-size: 2em; }
+    .text h2 { font-size: 1em; margin-top: 5px; }
 
     #titlePage img { max-height: 25em; }
 
@@ -685,8 +696,9 @@ body, html {
 /* Very Small Mobile (below 360px) */
 @media (max-width: 359px) {
     .nav a { font-size: 0.8em; }
-    .text h1 { font-size: 1.8em; }
-    .text h2 { font-size: 1em; }
+    .text { top: 60px; right: 5px; max-width: 55%; }
+    .text h1 { font-size: 1.6em; }
+    .text h2 { font-size: 0.9em; }
 
     .apple, .cherry, .silk, .bliss, .cream,
     .pot, .beef, .feta, .ham, .medley,
